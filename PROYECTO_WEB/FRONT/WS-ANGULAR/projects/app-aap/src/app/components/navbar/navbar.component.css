@@ -1,0 +1,11 @@
+.navbar{
+    width: 100%;
+    position: relative;
+    background-color: #24282d;
+}
+
+.nav-link{
+    color: white;
+    position: relative;
+    font-family: "Arial Unicode MS"
+}

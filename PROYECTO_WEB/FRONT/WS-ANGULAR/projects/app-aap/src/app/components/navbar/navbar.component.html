@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-md" >
+    <a class="navbar-brand" routerLink="/"> <img src="assets/img/EY/Portal_Logo.iix" width="30" height="30" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarEY" aria-controls="navbarEY" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarEY">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownAuditType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Audit type</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownAuditType">
+            <a class="dropdown-item" routerLink="/audit/external">{{ ext_audit }}</a>
+            <a class="dropdown-item" routerLink="/audit/internal">{{ int_audit }}</a>
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user/register">{{ register }}</a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user/profile">{{ profile }}</a>
+        </li>  
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/user/login">{{ login }}</a>
+        </li>  
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/user/logout">{{ logout }}</a>
+        </li>  
+      </ul>
+    </div>
+  </nav>

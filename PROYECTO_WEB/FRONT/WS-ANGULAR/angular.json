@@ -1,0 +1,130 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "APP-AAP": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/app-aap",
+      "sourceRoot": "projects/app-aap/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/APP-AAP",
+            "index": "projects/app-aap/src/index.html",
+            "main": "projects/app-aap/src/main.ts",
+            "polyfills": "projects/app-aap/src/polyfills.ts",
+            "tsConfig": "projects/app-aap/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/app-aap/src/favicon.ico",
+              "projects/app-aap/src/assets"
+            ],
+            "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "projects/app-aap/src/styles.css"
+            ],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/popper.js/dist/umd/popper.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/app-aap/src/environments/environment.ts",
+                  "with": "projects/app-aap/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "APP-AAP:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "APP-AAP:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "APP-AAP:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/app-aap/src/test.ts",
+            "polyfills": "projects/app-aap/src/polyfills.ts",
+            "tsConfig": "projects/app-aap/tsconfig.spec.json",
+            "karmaConfig": "projects/app-aap/karma.conf.js",
+            "assets": [
+              "projects/app-aap/src/favicon.ico",
+              "projects/app-aap/src/assets"
+            ],
+            "styles": [
+              "projects/app-aap/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/app-aap/tsconfig.app.json",
+              "projects/app-aap/tsconfig.spec.json",
+              "projects/app-aap/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/app-aap/e2e/protractor.conf.js",
+            "devServerTarget": "APP-AAP:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "APP-AAP:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "APP-AAP"
+}

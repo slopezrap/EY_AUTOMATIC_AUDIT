@@ -1,0 +1,2 @@
+Para angular ver el fichero: environment --> \PROYECTO_WEB\FRONT\WS-ANGULAR\projects\environments
+Para django ver el fichero: settings.py  --> \PROYECTO_WEB\BACK\WS_DJANGO\WS_DJANGO
