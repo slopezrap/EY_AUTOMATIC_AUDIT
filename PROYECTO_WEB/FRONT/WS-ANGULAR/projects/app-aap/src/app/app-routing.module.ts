@@ -3,13 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from 'projects/app-aap/src/app/components/home/home.component'
 import { Page404Component } from 'projects/app-aap/src/app/components/page404/page404.component'
 import { ExternalAuditComponent } from 'projects/app-aap/src/app/components/audit/external-audit/external-audit.component'
+import { FFPPComponent } from 'projects/app-aap/src/app/components/audit/external-audit/ffpp/ffpp.component'
 
 //Aqui es donde vamos a crear todas nuestras rutas
 //Para crear una ruta es muy facil, a la raiz rutas le pasamos un
 //objeto, indicandole la ruta y el componente que se renderizara
 const routes: Routes = [
   { path:'', component: HomeComponent }, //Ruta con la pantalla inicio
-  { path:'audit/external', component: ExternalAuditComponent}, //Ruta con las páginas 404 de no encontrado
+  { path:'audit/external', component: ExternalAuditComponent}, //Ruta donde se encontraran todos los procesos de auditoria externa
+  { path:'audit/external/ffpp', component: FFPPComponent}, //Ruta donde se encontraran el proceso de fondos de pensiones
   { path:'**', component: Page404Component}, //Ruta con las páginas 404 de no encontrado|| OJO ESTA LINEA SIEMPRE AL FINAL YA QUE ES TODAS LAS RUTAS 
 ];
 

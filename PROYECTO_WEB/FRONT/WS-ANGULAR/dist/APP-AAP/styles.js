@@ -191,7 +191,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "/* You can add global styles to this file, and also import other style files */\n", "",{"version":3,"sources":["webpack://src/styles.css"],"names":[],"mappings":"AAAA,8EAA8E","sourcesContent":["/* You can add global styles to this file, and also import other style files */\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "/* You can add global styles to this file, and also import other style files */\nhtml, body {\n  height: 100%;\n  background-color: #24282d;\n  color: white;\n}\n", "",{"version":3,"sources":["webpack://src/styles.css"],"names":[],"mappings":"AAAA,8EAA8E;AAC9E;EACE,YAAY;EACZ,yBAAyB;EACzB,YAAY;AACd","sourcesContent":["/* You can add global styles to this file, and also import other style files */\nhtml, body {\n  height: 100%;\n  background-color: #24282d;\n  color: white;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
