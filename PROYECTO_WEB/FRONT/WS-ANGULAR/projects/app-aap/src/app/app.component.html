@@ -1,3 +1,7 @@
 <app-navbar></app-navbar>
-<app-hero></app-hero>
+
+<!-- componente hero que solo estara en la pagina "/" ya que para eso uso la logica hideElemnt definida en el fichero app.component.ts -->
+<app-hero [hidden]="hideElement"></app-hero>
+
+<!-- router-outler es el encargado de inyectar las rutas del fichero app-routing.module.ts -->
 <router-outlet></router-outlet>
