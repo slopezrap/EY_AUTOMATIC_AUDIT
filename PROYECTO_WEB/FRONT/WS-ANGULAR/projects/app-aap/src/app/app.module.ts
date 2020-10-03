@@ -9,7 +9,8 @@ import { NgxElectronModule } from 'ngx-electron';
 import { HomeComponent } from './components/home/home.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { Page404Component } from './components/page404/page404.component'; 
+import { Page404Component } from './components/page404/page404.component';
+import { ExternalAuditComponent } from './components/audit/external-audit/external-audit.component'; 
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { Page404Component } from './components/page404/page404.component';
     HomeComponent,
     HeroComponent,
     NavbarComponent,
-    Page404Component
+    Page404Component,
+    ExternalAuditComponent
   ],
   imports: [
     BrowserModule,
