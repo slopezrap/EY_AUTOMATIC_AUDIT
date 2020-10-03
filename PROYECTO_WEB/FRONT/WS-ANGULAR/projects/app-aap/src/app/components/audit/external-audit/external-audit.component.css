@@ -1,0 +1,35 @@
+.containerExternaAuditEY{
+    background-color: #24282d;
+    padding: 50px;
+}
+
+.card-deck{
+    font-family: "Arial Unicode MS";
+    color: white;
+    
+}
+.card{
+    border: 0;
+}
+.card-header{
+    background-color: yellow;
+    color:  #24282d;
+    font-family: "Arial Unicode MS";
+}
+
+.card-body{
+    font-family: "Arial Unicode MS";
+    background-color: grey;
+}
+
+.btn-EY{
+    background-color: #24282d;
+    color: white;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    display: block;
+    width: 100%;
+    font-family: "Arial Unicode MS";
+}

@@ -10,7 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { Page404Component } from './components/page404/page404.component';
-import { ExternalAuditComponent } from './components/audit/external-audit/external-audit.component'; 
+import { ExternalAuditComponent } from './components/audit/external-audit/external-audit.component';
+import { FFPPComponent } from './components/audit/external-audit/ffpp/ffpp.component'; 
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ExternalAuditComponent } from './components/audit/external-audit/extern
     HeroComponent,
     NavbarComponent,
     Page404Component,
-    ExternalAuditComponent
+    ExternalAuditComponent,
+    FFPPComponent
   ],
   imports: [
     BrowserModule,
