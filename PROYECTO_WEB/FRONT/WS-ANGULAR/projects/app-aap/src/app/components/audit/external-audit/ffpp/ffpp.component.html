@@ -1,26 +1,11 @@
-<div class="header">
-    <h1>Angular File Upload</h1>
-</div>
+
 <div class="row margin25">
-
-    <div class="col-md-4">
-    </div>
-    <div class="col-md-4">
-
-    <div class="input-group">
-        <div class="input-group-prepend">
-            <button  class="input-group-text upload" *ngIf="selectedFile" (click)="uploadFile()"  id="btnUpload">Subir</button>
-        </div>
-
-        <div class="custom-file">
-            <form method="post" enctype="multipart/form-data">
-                <input (change)="fileChanged($event)"  type="file"  class="custom-file-input"  id="inputGroupFile01"  aria-describedby="inputGroupFileAddon01"> 
-            </form>
-            <label class="custom-file-label" for="inputGroupFile01" >Fichero de plantilla</label>
-            <label class="custom-file-label" for="inputGroupFile01" *ngIf="selectedFile">{{selectedFile.name}}</label>
-        </div>
-    </div>
-
-
-    </div>
+  <div class="col-md-4">
+  </div>
+   <form [formGroup]="form" (ngSubmit)="uploadFile()">
+    <h1>Sube la plantilla</h1>
+    <input type="file" name="profile" (change)="fileChanged($event)" />
+    <button type="submit" *ngIf="ficheroSubir">Subir Fichero</button>
+  </form>
 </div>
+

@@ -21,7 +21,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '@a=@0@c$ijfov*=tcjz(qi%!h+-kx-0r#cd(qi%(k-jhp+ga9y'
-
+#USER:sergio
+#PASS: 123456
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -37,16 +38,25 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'APP_INICIO',
+    'corsheaders',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ORIGIN_ALLOW_ALL =  True
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:4200",
 ]
 
 ROOT_URLCONF = 'WS_DJANGO.urls'
@@ -118,3 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+MEDIA_URL = '/MEDIA/'
+MEDIA_ROOT = os.path.join(BASE_DIR,"MEDIA")
+MEDIA_EXTERNAL_AUDIT_FFPP = os.path.join(MEDIA_ROOT,"APP_INICIO/EXTERNAL_AUDIT/FFPP")
