@@ -16,17 +16,24 @@ module.exports = __webpack_require__(/*! C:\Users\slope\OneDrive\Escritorio\EY\E
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
   \*****************************************/
-/*! exports provided: environment */
+/*! exports provided: environment, urls */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urls", function() { return urls; });
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 const environment = {
-    production: false
+    production: false,
+    apiURL: 'http://127.0.0.1:8000/api'
+};
+const urls = {
+    baseExternalAudit: '/audit/external',
+    baseFFPP: '/ffpp',
+    baseFFPPUploadFile: '/upload',
 };
 /*
  * For easier debugging in development mode, you can import the following file
@@ -347,14 +354,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "e4iD");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "EM62");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app-routing.module */ "vY5A");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "Sy1n");
-/* harmony import */ var ngx_electron__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-electron */ "tGUb");
-/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/home/home.component */ "BuFo");
-/* harmony import */ var _components_hero_hero_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/hero/hero.component */ "Qbzz");
-/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "hrlM");
-/* harmony import */ var _components_page404_page404_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/page404/page404.component */ "WMHx");
-/* harmony import */ var _components_audit_external_audit_external_audit_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/audit/external-audit/external-audit.component */ "WiT+");
-/* harmony import */ var _components_audit_external_audit_ffpp_ffpp_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/audit/external-audit/ffpp/ffpp.component */ "cw+h");
+/* harmony import */ var ngx_electron__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-electron */ "tGUb");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "vobO");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "nIj0");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "Sy1n");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/home/home.component */ "BuFo");
+/* harmony import */ var _components_hero_hero_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/hero/hero.component */ "Qbzz");
+/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "hrlM");
+/* harmony import */ var _components_page404_page404_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/page404/page404.component */ "WMHx");
+/* harmony import */ var _components_audit_external_audit_external_audit_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/audit/external-audit/external-audit.component */ "WiT+");
+/* harmony import */ var _components_audit_external_audit_ffpp_ffpp_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/audit/external-audit/ffpp/ffpp.component */ "cw+h");
+/* harmony import */ var _services_audit_external_audit_ffpp_upload_file_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/audit/external-audit/ffpp/upload-file.service */ "g3eZ");
+//Modulos
+
+
+
+
+
+
+//Componentes
 
 
 
@@ -362,47 +380,55 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
+//Servicios
 
 
 class AppModule {
 }
-AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [], imports: [[
+AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]] });
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [
+        _services_audit_external_audit_ffpp_upload_file_service__WEBPACK_IMPORTED_MODULE_13__["UploadFileService"],
+    ], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
-            ngx_electron__WEBPACK_IMPORTED_MODULE_4__["NgxElectronModule"]
+            ngx_electron__WEBPACK_IMPORTED_MODULE_3__["NgxElectronModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
-        _components_home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"],
-        _components_hero_hero_component__WEBPACK_IMPORTED_MODULE_6__["HeroComponent"],
-        _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_7__["NavbarComponent"],
-        _components_page404_page404_component__WEBPACK_IMPORTED_MODULE_8__["Page404Component"],
-        _components_audit_external_audit_external_audit_component__WEBPACK_IMPORTED_MODULE_9__["ExternalAuditComponent"],
-        _components_audit_external_audit_ffpp_ffpp_component__WEBPACK_IMPORTED_MODULE_10__["FFPPComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+        _components_home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
+        _components_hero_hero_component__WEBPACK_IMPORTED_MODULE_8__["HeroComponent"],
+        _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_9__["NavbarComponent"],
+        _components_page404_page404_component__WEBPACK_IMPORTED_MODULE_10__["Page404Component"],
+        _components_audit_external_audit_external_audit_component__WEBPACK_IMPORTED_MODULE_11__["ExternalAuditComponent"],
+        _components_audit_external_audit_ffpp_ffpp_component__WEBPACK_IMPORTED_MODULE_12__["FFPPComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
-        ngx_electron__WEBPACK_IMPORTED_MODULE_4__["NgxElectronModule"]] }); })();
+        ngx_electron__WEBPACK_IMPORTED_MODULE_3__["NgxElectronModule"],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"],
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
                 declarations: [
-                    _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
-                    _components_home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"],
-                    _components_hero_hero_component__WEBPACK_IMPORTED_MODULE_6__["HeroComponent"],
-                    _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_7__["NavbarComponent"],
-                    _components_page404_page404_component__WEBPACK_IMPORTED_MODULE_8__["Page404Component"],
-                    _components_audit_external_audit_external_audit_component__WEBPACK_IMPORTED_MODULE_9__["ExternalAuditComponent"],
-                    _components_audit_external_audit_ffpp_ffpp_component__WEBPACK_IMPORTED_MODULE_10__["FFPPComponent"]
+                    _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+                    _components_home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
+                    _components_hero_hero_component__WEBPACK_IMPORTED_MODULE_8__["HeroComponent"],
+                    _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_9__["NavbarComponent"],
+                    _components_page404_page404_component__WEBPACK_IMPORTED_MODULE_10__["Page404Component"],
+                    _components_audit_external_audit_external_audit_component__WEBPACK_IMPORTED_MODULE_11__["ExternalAuditComponent"],
+                    _components_audit_external_audit_ffpp_ffpp_component__WEBPACK_IMPORTED_MODULE_12__["FFPPComponent"]
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                     _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
-                    ngx_electron__WEBPACK_IMPORTED_MODULE_4__["NgxElectronModule"]
+                    ngx_electron__WEBPACK_IMPORTED_MODULE_3__["NgxElectronModule"],
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"],
+                    _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]
                 ],
-                providers: [],
-                bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
+                providers: [
+                    _services_audit_external_audit_ffpp_upload_file_service__WEBPACK_IMPORTED_MODULE_13__["UploadFileService"],
+                ],
+                bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
             }]
     }], null, null); })();
 
@@ -420,76 +446,70 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FFPPComponent", function() { return FFPPComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "EM62");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "2kYt");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "nIj0");
+/* harmony import */ var _services_audit_external_audit_ffpp_upload_file_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/audit/external-audit/ffpp/upload-file.service */ "g3eZ");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "2kYt");
 
 
 
-function FFPPComponent_button_8_Template(rf, ctx) { if (rf & 1) {
-    const _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function FFPPComponent_button_8_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r3); const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r2.uploadFile(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Subir");
+
+
+function FFPPComponent_button_6_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Subir Fichero");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-} }
-function FFPPComponent_label_14_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "label", 9);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r1.selectedFile.name);
 } }
 class FFPPComponent {
-    constructor() {
-        this.selectedFile = null;
-        // Funcion que recoge el valor del fichero del front y abre socket con el back
-        this.fileChanged = (event) => {
-            this.selectedFile = event.target.files[0];
-            console.log("hola");
-        };
+    constructor(formBuilder, uploadFileService) {
+        this.formBuilder = formBuilder;
+        this.uploadFileService = uploadFileService;
+        this.ficheroSubir = null;
     }
     ngOnInit() {
+        this.form = this.formBuilder.group({
+            profile: ['']
+        });
+    }
+    // Funcion que recoge el valor del fichero del front y abre socket con el back
+    fileChanged(event) {
+        if (event.target.files.length > 0) {
+            this.ficheroSubir = event.target.files[0];
+            this.form.get('profile').setValue(this.ficheroSubir);
+        }
     }
     // Funcion que empieza a enviar el fichero y llama a la funcion que gestiona todo
     uploadFile() {
         console.log("FRONT: Upload File...");
+        const formData = new FormData();
+        formData.append('plantilla_xlsx', this.form.get('profile').value);
+        this.uploadFileService.upload(formData).subscribe((res) => {
+            this.response = res;
+        }, (err) => {
+            console.log(err);
+        });
     }
 }
-FFPPComponent.ɵfac = function FFPPComponent_Factory(t) { return new (t || FFPPComponent)(); };
-FFPPComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FFPPComponent, selectors: [["app-ffpp"]], decls: 15, vars: 2, consts: [[1, "header"], [1, "row", "margin25"], [1, "col-md-4"], [1, "input-group"], [1, "input-group-prepend"], ["class", "input-group-text upload", "id", "btnUpload", 3, "click", 4, "ngIf"], [1, "custom-file"], ["method", "post", "enctype", "multipart/form-data"], ["type", "file", "id", "inputGroupFile01", "aria-describedby", "inputGroupFileAddon01", 1, "custom-file-input", 3, "change"], ["for", "inputGroupFile01", 1, "custom-file-label"], ["class", "custom-file-label", "for", "inputGroupFile01", 4, "ngIf"], ["id", "btnUpload", 1, "input-group-text", "upload", 3, "click"]], template: function FFPPComponent_Template(rf, ctx) { if (rf & 1) {
+FFPPComponent.ɵfac = function FFPPComponent_Factory(t) { return new (t || FFPPComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_audit_external_audit_ffpp_upload_file_service__WEBPACK_IMPORTED_MODULE_2__["UploadFileService"])); };
+FFPPComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FFPPComponent, selectors: [["app-ffpp"]], decls: 7, vars: 2, consts: [[1, "row", "margin25"], [1, "col-md-4"], [3, "formGroup", "ngSubmit"], ["type", "file", "name", "profile", 3, "change"], ["type", "submit", 4, "ngIf"], ["type", "submit"]], template: function FFPPComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h1");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Angular File Upload");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "form", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function FFPPComponent_Template_form_ngSubmit_2_listener() { return ctx.uploadFile(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "h1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Sube la plantilla");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "input", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("change", function FFPPComponent_Template_input_change_5_listener($event) { return ctx.fileChanged($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, FFPPComponent_button_8_Template, 2, 0, "button", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "form", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "input", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("change", function FFPPComponent_Template_input_change_11_listener($event) { return ctx.fileChanged($event); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "label", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Fichero de plantilla");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, FFPPComponent_label_14_Template, 2, 1, "label", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, FFPPComponent_button_6_Template, 2, 0, "button", 4);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.selectedFile);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.selectedFile);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"]], styles: [".header[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\r\n    width: 100%;\r\n    height: 200px;\r\n    display: flex;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInByb2plY3RzL2FwcC1hYXAvc3JjL2FwcC9jb21wb25lbnRzL2F1ZGl0L2V4dGVybmFsLWF1ZGl0L2ZmcHAvZmZwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztJQUNYLGFBQWE7SUFDYixhQUFhO0FBQ2pCIiwiZmlsZSI6InByb2plY3RzL2FwcC1hYXAvc3JjL2FwcC9jb21wb25lbnRzL2F1ZGl0L2V4dGVybmFsLWF1ZGl0L2ZmcHAvZmZwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWRlciBoMSB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMjAwcHg7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG59XHJcbiJdfQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.form);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.ficheroSubir);
+    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwcm9qZWN0cy9hcHAtYWFwL3NyYy9hcHAvY29tcG9uZW50cy9hdWRpdC9leHRlcm5hbC1hdWRpdC9mZnBwL2ZmcHAuY29tcG9uZW50LmNzcyJ9 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FFPPComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -497,7 +517,44 @@ FFPPComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
                 templateUrl: './ffpp.component.html',
                 styleUrls: ['./ffpp.component.css']
             }]
-    }], function () { return []; }, null); })();
+    }], function () { return [{ type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }, { type: _services_audit_external_audit_ffpp_upload_file_service__WEBPACK_IMPORTED_MODULE_2__["UploadFileService"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "g3eZ":
+/*!***************************************************************************!*\
+  !*** ./src/app/services/audit/external-audit/ffpp/upload-file.service.ts ***!
+  \***************************************************************************/
+/*! exports provided: UploadFileService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UploadFileService", function() { return UploadFileService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "EM62");
+/* harmony import */ var projects_app_aap_src_environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! projects/app-aap/src/environments/environment */ "AytR");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "vobO");
+
+
+
+
+class UploadFileService {
+    constructor(http) {
+        this.http = http;
+    }
+    upload(formData) {
+        return this.http.post(`${projects_app_aap_src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiURL}${projects_app_aap_src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["urls"].baseExternalAudit}${projects_app_aap_src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["urls"].baseFFPP}${projects_app_aap_src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["urls"].baseFFPPUploadFile}/`, formData);
+    }
+}
+UploadFileService.ɵfac = function UploadFileService_Factory(t) { return new (t || UploadFileService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
+UploadFileService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: UploadFileService, factory: UploadFileService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](UploadFileService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }]; }, null); })();
 
 
 /***/ }),
