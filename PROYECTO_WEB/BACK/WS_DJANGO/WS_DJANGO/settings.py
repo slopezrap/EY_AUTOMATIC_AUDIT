@@ -32,15 +32,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'APP_AAP',
+    'rest_framework',
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'APP_INICIO',
-    'corsheaders',
-    'rest_framework',
+
 ]
 
 MIDDLEWARE = [
@@ -126,9 +127,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
+BASE_PROYECTO_WEB = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
+BASE_MEDIA_ROOT = os.path.join(os.path.join(BASE_PROYECTO_WEB,"BACK"),"WS_DJANGO")
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-MEDIA_URL = '/MEDIA/'
-MEDIA_ROOT = os.path.join(BASE_DIR,"MEDIA")
-MEDIA_EXTERNAL_AUDIT_FFPP = os.path.join(MEDIA_ROOT,"APP_INICIO/EXTERNAL_AUDIT/FFPP")
+STATIC_ROOT = os.path.join(BASE_MEDIA_ROOT, "static")
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_MEDIA_ROOT,"media")
+MEDIA_EXTERNAL_AUDIT_FFPP = os.path.join(os.path.join(os.path.join(MEDIA_ROOT,"APP_AAP"),"EXTERNAL_AUDIT"),"FFPP")

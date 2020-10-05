@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fab975e8-70a7-4e77-baaf-b962466a9327" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/APP_INICIO/AUDIT/EXTERNAL_AUDIT/FFPP/api/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/APP_INICIO/AUDIT/EXTERNAL_AUDIT/FFPP/api/resources/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/APP_INICIO/AUDIT/EXTERNAL_AUDIT/FFPP/api/resources/r_ffpp_uploadFile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/APP_INICIO/AUDIT/EXTERNAL_AUDIT/FFPP/api/routers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/APP_INICIO/AUDIT/EXTERNAL_AUDIT/FFPP/api/serializers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/APP_INICIO/AUDIT/EXTERNAL_AUDIT/FFPP/api/serializers/s_ffpp_uploadFile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/APP_INICIO/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/APP_INICIO/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/APP_INICIO/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/APP_INICIO/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/APP_INICIO/migrations/0002_auto_20201004_1510.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/APP_INICIO/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/APP_INICIO/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/APP_INICIO/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/APP_INICIO/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/WS_DJANGO/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WS_DJANGO/WS_DJANGO/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/WS_DJANGO/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WS_DJANGO/WS_DJANGO/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WS_DJANGO/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/django-admin.exe" beforeDir="false" afterPath="$PROJECT_DIR$/env_BACK/Scripts/django-admin.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/easy_install-3.8.exe" beforeDir="false" afterPath="$PROJECT_DIR$/env_BACK/Scripts/easy_install-3.8.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/easy_install.exe" beforeDir="false" afterPath="$PROJECT_DIR$/env_BACK/Scripts/easy_install.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/futurize-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/futurize.exe" beforeDir="false" afterPath="$PROJECT_DIR$/env_BACK/Scripts/futurize.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/futurize.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/pasteurize-script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/pasteurize.exe" beforeDir="false" afterPath="$PROJECT_DIR$/env_BACK/Scripts/pasteurize.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/pasteurize.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/pip.exe" beforeDir="false" afterPath="$PROJECT_DIR$/env_BACK/Scripts/pip.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/pip3.8.exe" beforeDir="false" afterPath="$PROJECT_DIR$/env_BACK/Scripts/pip3.8.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/pip3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/env_BACK/Scripts/pip3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/pyi-archive_viewer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/env_BACK/Scripts/pyi-archive_viewer.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/pyi-bindepend.exe" beforeDir="false" afterPath="$PROJECT_DIR$/env_BACK/Scripts/pyi-bindepend.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/pyi-grab_version.exe" beforeDir="false" afterPath="$PROJECT_DIR$/env_BACK/Scripts/pyi-grab_version.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/pyi-makespec.exe" beforeDir="false" afterPath="$PROJECT_DIR$/env_BACK/Scripts/pyi-makespec.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/pyi-set_version.exe" beforeDir="false" afterPath="$PROJECT_DIR$/env_BACK/Scripts/pyi-set_version.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/pyinstaller.exe" beforeDir="false" afterPath="$PROJECT_DIR$/env_BACK/Scripts/pyinstaller.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env_BACK/Scripts/sqlformat.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FRONT/WS-ANGULAR/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FRONT/WS-ANGULAR/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PaginaWeb.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../PaginaWeb.docx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1iSpaPtIip52NpicRMxkZQXiG4V" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fab975e8-70a7-4e77-baaf-b962466a9327" name="Default Changelist" comment="" />
+      <created>1601910909924</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601910909924</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="719" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601911431954">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="719" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601911431954" />
+    <state x="666" y="119" width="587" height="801" key="find.popup" timestamp="1601911087887">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="666" y="119" width="587" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601911087887" />
+  </component>
+</project>

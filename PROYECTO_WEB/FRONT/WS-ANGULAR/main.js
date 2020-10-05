@@ -11,7 +11,7 @@ let mainWindow
 
 function createWindow() {
 
-    const path2 = "C:/Users/slope/OneDrive/Escritorio/EY/EY_ANGULAR-ELECTRON-DJANGO/PROYECTO_WEB/BACK/WS_DJANGO/dist/WS_DJANGO/"
+    const path2 = "C:/Users/slope/OneDrive/Escritorio/EY/EY_ANGULAR-ELECTRON-DJANGO/PROYECTO_WEB/BACK/WS_DJANGO/dist/"
     console.log(path2)
       var subpy = require('child_process').spawn(path2+'WS_DJANGO.exe', ['runserver', 'localhost:8000']);
     var mainAddr = 'http://localhost:8000';

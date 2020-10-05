@@ -11,6 +11,8 @@ from rest_framework import views
 from rest_framework.response import Response
 from rest_framework import status
 from ..serializers.s_ffpp_uploadFile import PlantillaFFPPRellena_Serializer
+import os
+from django.conf import settings
 
 class ffppUploadFile_View(views.APIView):
     permission_classes = ()
