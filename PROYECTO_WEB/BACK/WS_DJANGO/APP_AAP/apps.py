@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class AppInicioConfig(AppConfig):
-    name = 'APP_INICIO'
+    name = 'APP_AAP'

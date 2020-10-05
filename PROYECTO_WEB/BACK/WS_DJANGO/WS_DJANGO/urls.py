@@ -21,7 +21,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/audit/external/', include('APP_INICIO.AUDIT.EXTERNAL_AUDIT.FFPP.api.routers')),
+    path('api/audit/external/', include('APP_AAP.AUDIT.EXTERNAL_AUDIT.FFPP.api.routers')),
 ]
 
 if settings.DEBUG:
